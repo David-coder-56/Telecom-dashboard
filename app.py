@@ -14,6 +14,9 @@ avg_tenure = df['Tenure'].mean()
 
 app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
 
+# THIS LINE IS CRUCIAL FOR RENDER
+server = app.server
+
 COLORS = {'Yes': '#FF4B4B', 'No': '#00CC96', 'bg': '#f4f7f6', 'text': '#2c3e50'}
 
 app.layout = html.Div(style={'backgroundColor': COLORS['bg'], 'minHeight': '100vh', 'padding': '20px'}, children=[
@@ -115,4 +118,4 @@ def render_content(tab, selected_contracts):
     return content, kpi_layout
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8060)
+    app.run(debug=True)
