@@ -23,6 +23,20 @@ app.layout = html.Div(style={'backgroundColor': COLORS['bg'], 'minHeight': '100v
     
     # Header Section
     html.Div([
+
+        html.H1(
+    "Cyber Hybrid",
+    style={
+        "margin": "0",
+        "fontWeight": "700",
+        "letterSpacing": "0.5px"
+    }
+)
+,
+                        html.Img(
+                            src="/assets/Cyber Hybrid Logo.png", 
+                            style={"height": "60px", "marginBottom": "20px", "borderRadius": "50px"}
+                        ),
         html.H1("Telecom Customer Retention Insights", style={'textAlign': 'left', 'color': COLORS['text'], 'fontWeight': 'bold'}),
         html.P("Deep dive analysis into customer churn patterns and behavioral drivers.", style={'color': '#7f8c8d'}),
         
