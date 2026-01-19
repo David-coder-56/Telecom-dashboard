@@ -13,6 +13,7 @@ churn_rate = (df['Churn'] == 'Yes').mean() * 100
 avg_tenure = df['Tenure'].mean()
 
 app = dash.Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css'])
+app.title = "Telecom Customer Retention Insights"
 
 # THIS LINE IS CRUCIAL FOR RENDER
 server = app.server
